@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hobbies: MyString
+  type_of_person: MyString
+  love_animals: false
+  lifestyle: MyString
+  diet: MyString
+  rescue_animals: false
+
+two:
+  hobbies: MyString
+  type_of_person: MyString
+  love_animals: false
+  lifestyle: MyString
+  diet: MyString
+  rescue_animals: false

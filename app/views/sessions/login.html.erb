@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<body>
+
+  <% if flash[:message] %>
+  <h3> <%= flash[:message] %> </h3>
+  <% end %>
+
+<div class="logo" >
+
+  <img src ="/assets/Kouple.png",  alt="logo" />
+
+</div>
+<div class="background">
+  <img src="/assets/hands1.png", alt="holding" >
+
+</div>
+  <!-- <img class="background" src="/assets/hands1.png", alt="holding"/> -->
+    <div class = "login">
+    <%= form_tag '/login', :method => :post do |f| %>
+      <div class="email">
+        <%= label_tag "Email"%>
+        <p><%= email_field_tag "email" %></p>
+      </div>
+      <div class="password">
+        <%= label_tag "Password" %>
+        <p><%= password_field_tag "password"%></p>
+      </div>
+        <div class= "button">
+
+            <p><%= submit_tag "Log-in" %></p>
+
+    <% end %>
+
+    <%= button_to "Create Profile", new_user_path, method: :get  %>
+    </div>
+  </div>
+
+  <br>
+
+
+
+<!-- <img class="heart" src="/assets/Heart_under.png", alt="heart"/> -->
+
+
+
+
+
+
+
+</body>
+
+</html>
