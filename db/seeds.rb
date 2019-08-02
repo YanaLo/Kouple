@@ -16,7 +16,7 @@ User.destroy_all
 # end
 
 u1 = User.create(full_name: "Anna Bauman", user_name: "Lulu", email: "Anna@hello.com", password: "haha123", identity: "Non-binary", location: "New York", date_of_birth: "04/02/1981", partner: "Non-binary", relationship_type: "Possibility of Serious",photo: "/assets/person2.jpg")
-u2 = User.create(full_name: "Philip Smalls", user_name: "Lil' Dumplin", email: "Dumplin'@lol.com", password: "haha1234", identity: "Male", location: "New York", date_of_birth: "04/02/1987", partner: "Woman", relationship_type: "Possibility of Serious",photo: "/assets/person1.jpg")
+u2 = User.create(full_name: "Philip Smalls", user_name: "Lil' Dumplin", email: "z", password: "haha1234", identity: "Male", location: "New York", date_of_birth: "04/02/1987", partner: "Woman", relationship_type: "Possibility of Serious",photo: "/assets/person1.jpg")
 u3 = User.create(full_name: "Anthony Won", user_name: "Session", email: "Anthony@lala.com", password: "lol123", identity: "Male", location: "New York", date_of_birth: "04/02/1989", partner: "Woman", relationship_type: "Friendship",photo: "/assets/person3.jpg")
 u4 = User.create(full_name: "Sophia Song", user_name: "Giggles", email: "Giggles@hello.com", password: "lola12", identity: "Woman", location: "New York", date_of_birth: "04/02/1990", partner: "Non-binary", relationship_type: "Hookups",photo: "/assets/person4.jpg")
 u5 = User.create(full_name: "Mary Crivelli", user_name: "GameGem", email: "Mary@hello.com", password: "hello1", identity: "Woman", location: "Florida", date_of_birth: "04/02/1988", partner: "Male", relationship_type: "Be Partners",photo: "/assets/person5.jpg")
@@ -34,15 +34,39 @@ u14 = User.create(full_name: "Adrienne Miranda", user_name: "Spaceship", email: 
 # interest_find = Interest.find(interest.id)
 
 
-# Interest.create(hobbies:"Gardening", free_time: "Watch TV", love_animals: true, lifestyle: "Vegan", diet: "Healthy", matcher_id: u)
-#  Interest.create(hobbies:"Painting", free_time: "Just be lazy", love_animals: false, lifestyle: "Whatever", diet: "Anything goes", matcher_id: u)
-#  Interest.create(hobbies:"Rescue Animals", free_time: "Volunteering", love_animals: true, lifestyle: "Vegan", diet: "Any vegan food", matcher_id: u)
-#  Interest.create(hobbies:"Visit Animal Sanctuaries", free_time: "Go on protests", love_animals: true, lifestyle: "Vegan", diet: "Junk and healthy vegan food", matcher_id: u)
-#  Interest.create(hobbies:"Writing", free_time: "Take a walk", love_animals: true, lifestyle: "Sometimes go to the gym, eat fish", diet: "Presciterian, try to eat clean", matcher_id: u)
-#  Interest.create(hobbies:"Learning", free_time: "Go to the gym", love_animals: true, lifestyle: "Exercise a lot", diet: "Keto", matcher_id: u)
-#  Interest.create(hobbies:"Exercise", free_time: "Spend time with my pets", love_animals: true, lifestyle: "Eat vegetables and animal meats", diet: "Regular", matcher_id: u)
-#  Interest.create(hobbies:"MMA", free_time: "Hang out with friends", love_animals: true, lifestyle: "Athletic", diet: "Eat whatever is recommended", matcher_id: u)
-#  Interest.create(hobbies:"Coding", free_time: "Watch TV", love_animals: true, lifestyle: "Regular", diet: "What I can find", matcher_id: u)
-#  Interest.create(hobbies:"Dancing", free_time: "Go out", love_animals: true, lifestyle: "Regular, try to stay healthy", diet: "I watch what I eat but, not all the time", matcher_id: u)
+ i1 =  Interest.create(hobbies:"Gardening")
+ i2 = Interest.create(hobbies:"Painting")
+ i3 = Interest.create(hobbies:"Rescue Animals")
+ i4 = Interest.create(hobbies:"Visit Animal Sanctuaries")
+ i5 = Interest.create(hobbies:"Writing")
+ i6 = Interest.create(hobbies:"Basketball")
+ i7 = Interest.create(hobbies:"Coding")
+ i8 = Interest.create(hobbies:"Just Chill")
+ i9 = Interest.create(hobbies:"MMA")
+ i10 = Interest.create(hobbies:"Baseball")
+ i11 = Interest.create(hobbies:"Going to different events")
+
+
+  UserInterest.create(user: u1, interest: i1)
+  UserInterest.create(user: u2, interest: i2)
+  UserInterest.create(user: u3, interest: i11)
+  UserInterest.create(user: u13, interest: i6)
+  UserInterest.create(user: u11, interest: i3)
+  UserInterest.create(user: u6, interest: i5)
+  UserInterest.create(user: u8, interest: i7)
+  UserInterest.create(user: u10, interest: i9)
+  UserInterest.create(user: u12, interest: i10)
+  UserInterest.create(user: u14, interest: i4)
+  UserInterest.create(user: u4, interest: i8)
+  UserInterest.create(user: u5, interest: i4)
+  UserInterest.create(user: u7, interest: i9)
+  UserInterest.create(user: u9, interest: i3)
+
 
 # UserInterest.create(user: user, interest: interest1)
+# x = Interest.all.length
+# y = User.all.length
+#
+# 10.times do
+#   UserInterest.create(user_id: rand(1..y),interest_id: rand(1..x))
+# end

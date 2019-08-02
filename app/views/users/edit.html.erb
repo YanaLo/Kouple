@@ -1,2 +1,49 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<h1>Edit Your Information Here</h1>
+<div class="form">
+<%= form_for @user do |f| %>
+<%= f.label "Full Name:" %>
+<%= f.text_field :full_name %>
+<br>
+<br>
+<%= f.label "User Name:" %>
+<%= f.text_field :user_name %>
+<br>
+<br>
+<%= f.label "Email:" %>
+<%= f.text_field :email %>
+<br>
+<br>
+<%= f.label "Password:" %>
+<%= f.password_field :password %>
+<br>
+<br>
+<%= f.label "Identity:" %>
+<%= f.collection_select :identity, @choice, :to_s, :to_s, prompt: "Please, choose" %>
+<br>
+<br>
+<%= f.label "Location:" %>
+<%= f.text_field :location %>
+<br>
+<br>
+<%= f.label "DOB:" %>
+<%= f.date_field :date_of_birth %>
+<br>
+<br>
+<%= f.label "Interested in: " %>
+<%= f.collection_select :partner, @choice, :to_s, :to_s, prompt: "Please, choose"%>
+<br>
+<br>
+<%= f.label "Looking for:" %>
+<%= f.collection_select :relationship_type, @relationship_choice, :to_s, :to_s, prompt: "Please, choose" %>
+<br>
+<br>
+<%= collection_select :post, :interest_id, Interest.all, :id, :hobbies, prompt: "Please, select" %>
+<br>
+<br>
+<%= f.label "Photo" %>
+<%= f.text_field :photo %>
+
+<%= f.button "Update" %>
+<% end %>
+<%= button_to "Delete", destroy_user_path(@user), method: :delete %>
+</div>

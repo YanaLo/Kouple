@@ -22,12 +22,12 @@
     <div class = "login">
     <%= form_tag '/login', :method => :post do |f| %>
       <div class="email">
-        <%= label_tag "Email"%>
-        <p><%= email_field_tag "email" %></p>
+        <%= label_tag :email%>
+        <p><%= email_field_tag :email %></p>
       </div>
       <div class="password">
-        <%= label_tag "Password" %>
-        <p><%= password_field_tag "password"%></p>
+        <%= label_tag :password %>
+        <p><%= password_field_tag :password%></p>
       </div>
         <div class= "button">
 

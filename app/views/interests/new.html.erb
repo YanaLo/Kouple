@@ -1,2 +1,15 @@
-<h1>Interests#new</h1>
-<p>Find me in app/views/interests/new.html.erb</p>
+<h1>Interests</h1>
+<p>Please, pick at least two:</p>
+<div class="form_row">
+  <%= form_tag '/user_interests' do %>
+    <label for="Interests">Interests:</label>
+    <% [ 'Gardening', 'Painting', 'Rescue Animals', 'Visit Animal Sanctuaries', 'Writing', 'Basketball', 'Coding', 'Just Chill', 'MMA', 'Baseball', 'Going to different events' ].each do |int| %>
+      <br><%= radio_button_tag 'Interests', int, @interest == int %>
+      <%= int.humanize %>
+
+    <% end %>
+    <br>
+    <br>
+    <%= submit_tag "Submit" %>
+    <% end %>
+</div>

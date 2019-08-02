@@ -14,14 +14,8 @@ ActiveRecord::Schema.define(version: 2019_07_31_213717) do
 
   create_table "interests", force: :cascade do |t|
     t.string "hobbies"
-    t.string "type_of_person"
-    t.boolean "love_animals"
-    t.string "lifestyle"
-    t.string "diet"
-    t.boolean "rescue_animals"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "free_time"
   end
 
   create_table "matches", force: :cascade do |t|

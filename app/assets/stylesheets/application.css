@@ -62,6 +62,14 @@ left: 10%;
    border: 0.2em solid #D35400;
    text-align: center;
 }
+.profile{
+  padding-top: 2em;
+  min-height: 30em;
+  margin-left: 30%;
+  max-width: 40%;
+  border: 0.2em solid #D35400;
+  text-align: center;
+}
 .email{
 padding: 12px 12px 12px 0;
 display: inline-block;
